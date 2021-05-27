@@ -1,16 +1,11 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Video chat</h3>
-    <div class="col-md-12">
-        <div class="">
+    <center>
+        <div style="width: 600px !important; height:350px !important; margin: 5px; border: 1px solid gray; align:center;">
           <vue-webrtc ref="webrtc"
                       width="100%"
+                      cameraHeight=350
                       :roomId="roomId"
                       v-on:joined-room="logEvent"
                       v-on:left-room="logEvent"
@@ -27,7 +22,7 @@
             <button type="button" class="btn btn-primary" @click="onShareScreen">Share Screen</button>
           </div>
         </div>
-    </div>
+    </center>
   </div>
 </template>
 
